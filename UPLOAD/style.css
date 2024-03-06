@@ -1,0 +1,292 @@
+@font-face{
+    font-family: "degular", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "degular", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    font-family: "degular", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    margin:0;
+    cursor: url("curseurs/curseur.png"), pointer;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    cursor: url("curseurs/curseur_blanc.png"), pointer;
+}
+
+/* .INDEX{
+    margin: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: url("curseurs/curseur.png"), pointer;
+} */
+
+/* h1{
+    font-family: "degular", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    padding: 2%;
+    cursor: url("curseurs/curseur.png"), pointer;
+} */
+
+/* h2{
+    font-family: "degular", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    cursor: url("curseurs/curseur.png"), pointer;
+} */
+
+/* .grid2{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+} */
+
+/* .grid2 a{
+    display:grid;
+    background:#000;
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.grid2 a img,
+.grid2 a span{
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+
+.grid2 a span{
+    opacity:0;
+}
+
+.grid2 a:hover span{
+    opacity:1;
+}
+
+.grid2 a:hover img{
+    opacity:0;
+} */
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  
+  a{
+    color:#000;
+  }
+  
+  .current{
+    position: relative;
+    color:#000;
+  }
+  .current::after{
+    content:' ';
+    display: block;
+    width:50%;
+    height:6px;
+    bottom:-12px;
+    transform: translate(50%,0) rotate(-15deg);
+    opacity: 1;
+    position: absolute;
+  }
+  
+  nav a{
+    text-decoration: none;
+  }
+  
+  nav.mobile{
+    display:block;
+    font-size: 24px;
+    line-height: 1;
+  }
+  nav.mobile a{
+    /* line-height: 48px; */
+    padding:7px 14px;
+    height:48px;
+    background:#000;
+    color:#fff;
+    display: block;
+  }
+  @media (min-width:56em){
+    nav.mobile{
+      display:none;
+    }
+  }
+  nav.no-mobile{
+    display:none;
+  }
+  @media (min-width:56em){
+    nav.no-mobile{
+      display:block;
+    }
+  }
+  img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  
+  .header{
+    position:fixed;
+    z-index: 999;
+    top:0;
+    right:0;
+    left:0;
+    background: #fff;
+    height:48px;
+    display:grid;
+    grid-gap: 1.5em;
+    gap:1.5em;
+    grid-template-columns: 1fr;
+    justify-content: center;	
+    padding:0 24px;
+  }
+  
+  @media (min-width:40em){
+    .header{
+        grid-template-columns: repeat(auto-fill, 25em);
+      }
+  }
+  
+  .header-logo{
+    margin:0; 
+    font-size:1em;
+  }
+  
+  .header-flex{
+    grid-column: 1/-1;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+    gap:24px;
+    justify-content: center;	
+    margin:72px 0 24px 0;
+    padding:0 24px;
+  }
+  
+  @media (min-width:40em){
+    .grid{
+      grid-template-columns: repeat(auto-fill, 25em);
+      grid-auto-rows: 18em;
+      grid-auto-flow: row dense;
+    }
+  
+  }
+  
+  .s{
+    grid-column-end: span 1;
+    grid-row-end:span 1;
+  }
+  
+  .m{
+    grid-column-end: span 1;
+    grid-row-end:span 2;
+  }
+  
+  .l{
+    grid-column-end: span 1;
+    grid-row-end:span 1;
+  }
+  
+  @media (min-width:54.5em){
+    .l{
+      grid-column-end: span 2;
+      grid-row-end:span 2;
+    }  
+  }
+  
+  .a-img-txt{
+    display:grid; 
+    text-decoration: none;
+    font-size: 24px;
+  }
+   
+  /* les enfants se superposent */
+  .a-img-txt>*{
+    grid-area:1/1/-1/-1; 
+    /* raccourci pour grid-row et grid-column */
+  }
+   
+  /* le texte */
+  .a-txt{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    opacity:0;
+    background:rgba(0,0,0);
+    transition: .4s;
+    padding:24px;
+  }
+   
+  /* le survol */
+  .a-txt:hover{
+    opacity:1;
+  }
+  
+  
+  .footer{
+    background: #fff;
+    display:grid;
+    grid-gap: 1.5em;
+    gap:1.5em;
+    grid-template-columns: 1fr;
+    justify-content: center;	
+    padding:0 24px;
+  }
+  
+  .footer a{
+    display:block;
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+  }
+  .footer .current{
+    color:#000;
+    font-weight: 700;
+  }
+  
+  .footer .current::after{
+    display: none;
+  }
+  
+  @media (min-width:40em){
+    .footer{
+        grid-template-columns: repeat(auto-fill, 25em);
+      }
+  }
+  
+  @media (min-width:56em){
+    .footer{
+      display:none;
+    }
+  }
